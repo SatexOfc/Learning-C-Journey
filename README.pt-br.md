@@ -4,7 +4,7 @@
 
 Esta pasta reúne uma sequência de exercícios em linguagem C, construídos progressivamente para consolidar os fundamentos da linguagem: desde entrada e saída de dados até estruturas de controle mais elaboradas, como laços aninhados a lógicas de estado (sistema de login).
 
-Cada arquivo `.c` representa um exercício independente, compilável isoladamente, e o `.exe` correspondente é o binário já gerado a partir dele.
+Cada arquivo `.c` representa um exercício independente, compilável isoladamente. Os binários (`.exe`), pastas de build, arquivos de IDE e de sistema operacional **não são versionados** — veja o `.gitignore` do repositório.
 
 ## Como compilar e executar
 

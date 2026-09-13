@@ -4,7 +4,7 @@
 
 This folder gathers a sequence of C exercises, built progressively to solidify the fundamentals of the language: from input/output handling to more elaborate control structures, such as nested loops and stateful logic (login system).
 
-Each `.c` file represents an independent exercise, compilable on its own, and the corresponding `.exe` is the binary already generated from it.
+Each `.c` file represents an independent exercise, compilable on its own. Binaries (`.exe`), build folders, IDE files, and OS files **are not tracked** — see the repository's `.gitignore`.
 
 ## How to compile and run
 
