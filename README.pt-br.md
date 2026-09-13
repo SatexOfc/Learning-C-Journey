@@ -52,6 +52,9 @@ Gera a tabuada de multiplicação de um número digitado pelo usuário. **Agrega
 ### `Exercises-11.c` — Classificação de pares e ímpares
 Percorre os números de 0 até o valor digitado, classificando cada um como par ou ímpar e contabilizando o total de cada categoria. **Agrega:** o uso do operador módulo (`%`) para checagem de paridade, combinação de `for` com `if/else` dentro do laço, e acumuladores (`par`, `impar`) que são atualizados a cada iteração.
 
+### `Exercises-12.c` — Contagem de positivos, negativos e zeros (sem array)
+Lê 10 números inteiros digitados pelo usuário e conta quantos são positivos, negativos ou iguais a zero, sem usar vetores. **Agrega:** reforço do `for` combinado com múltiplas condições (`if/else if/else`), uso de mais de uma variável contadora simultaneamente, e a prática de resolver um problema de classificação sem depender de estruturas de dados (preparando o terreno para o uso de arrays futuramente).
+
 ---
 
 ## Progressão geral de aprendizado
@@ -60,7 +63,7 @@ Percorre os números de 0 até o valor digitado, classificando cada um como par 
 |---|---|---|
 | Fundamentos | 1, 3 | Variáveis, tipos, `scanf`/`printf` |
 | Condicionais | 2, 4, 5, 6 | `if/else`, `switch`, operadores lógicos e relacionais |
-| Laços de repetição | 7, 9, 10, 11 | `while`, `for`, contadores, operador módulo, acumuladores |
+| Laços de repetição | 7, 9, 10, 11, 12 | `while`, `for`, contadores, operador módulo, acumuladores múltiplos |
 | Integração de conceitos | 8 | Laços + condicionais + strings + controle de estado |
 
 No conjunto, a pasta cobre os pilares essenciais da linguagem C — **entrada/saída, tipos de dados, estruturas condicionais, laços de repetição e manipulação de strings** — culminando em um exercício (login) que já exige combinar todos esses conceitos para resolver um problema mais realista.

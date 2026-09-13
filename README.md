@@ -52,6 +52,9 @@ Generates the multiplication table for a number entered by the user. **Adds:** r
 ### `Exercises-11.c` — Even and odd number classification
 Iterates through the numbers from 0 to the entered value, classifying each as even or odd and counting the total of each category. **Adds:** the use of the modulo operator (`%`) for parity checking, combining `for` with `if/else` inside the loop, and accumulators (`par`, `impar`) updated on each iteration.
 
+### `Exercises-12.c` — Counting positives, negatives, and zeros (no arrays)
+Reads 10 integers entered by the user and counts how many are positive, negative, or zero, without using arrays. **Adds:** reinforcement of `for` combined with multiple conditions (`if/else if/else`), the use of more than one counter variable at the same time, and practice solving a classification problem without relying on data structures (laying the groundwork for arrays later on).
+
 ---
 
 ## Overall learning progression
@@ -60,7 +63,7 @@ Iterates through the numbers from 0 to the entered value, classifying each as ev
 |---|---|---|
 | Fundamentals | 1, 3 | Variables, types, `scanf`/`printf` |
 | Conditionals | 2, 4, 5, 6 | `if/else`, `switch`, logical and relational operators |
-| Loops | 7, 9, 10, 11 | `while`, `for`, counters, modulo operator, accumulators |
+| Loops | 7, 9, 10, 11, 12 | `while`, `for`, counters, modulo operator, multiple accumulators |
 | Concept integration | 8 | Loops + conditionals + strings + state control |
 
 Overall, the folder covers the essential pillars of the C language — **input/output, data types, conditional structures, loops, and string manipulation** — culminating in an exercise (login) that already requires combining all these concepts to solve a more realistic problem.
