@@ -6,18 +6,27 @@ Esta pasta reúne uma sequência de exercícios em linguagem C, construídos pro
 
 Cada arquivo `.c` representa um exercício independente, compilável isoladamente. Os binários (`.exe`), pastas de build, arquivos de IDE e de sistema operacional **não são versionados** — veja o `.gitignore` do repositório.
 
+## Estrutura de pastas
+
+```
+Exercises-Initial-Basic/          → Exercises 1 a 11
+Exercises-Initial-Intermediary/   → Exercises 12 em diante
+```
+
 ## Como compilar e executar
 
 ```bash
-gcc Exercises-N.c -o Exercises-N
+gcc Exercises-Initial-Basic/Exercises-N.c -o Exercises-N
 ./Exercises-N
 ```
 
-(substitua `N` pelo número do exercício)
+(substitua `N` pelo número do exercício e o caminho da pasta conforme onde o arquivo estiver)
 
 ---
 
 ## Resumo dos exercícios
+
+### 📁 Exercises-Initial-Basic
 
 ### `Exercises-1.c` — Entrada e saída básica
 Captura nome, idade e altura do usuário via `scanf` e exibe os dados formatados com `printf`. **Agrega:** os tipos primitivos (`char`, `int`, `float`), o uso de vetores de `char` como strings, e o par fundamental `scanf`/`printf` com especificadores de formato (`%s`, `%d`, `%f`).
@@ -51,6 +60,8 @@ Gera a tabuada de multiplicação de um número digitado pelo usuário. **Agrega
 
 ### `Exercises-11.c` — Classificação de pares e ímpares
 Percorre os números de 0 até o valor digitado, classificando cada um como par ou ímpar e contabilizando o total de cada categoria. **Agrega:** o uso do operador módulo (`%`) para checagem de paridade, combinação de `for` com `if/else` dentro do laço, e acumuladores (`par`, `impar`) que são atualizados a cada iteração.
+
+### 📁 Exercises-Initial-Intermediary
 
 ### `Exercises-12.c` — Contagem de positivos, negativos e zeros (sem array)
 Lê 10 números inteiros digitados pelo usuário e conta quantos são positivos, negativos ou iguais a zero, sem usar vetores. **Agrega:** reforço do `for` combinado com múltiplas condições (`if/else if/else`), uso de mais de uma variável contadora simultaneamente, e a prática de resolver um problema de classificação sem depender de estruturas de dados (preparando o terreno para o uso de arrays futuramente).

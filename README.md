@@ -6,18 +6,27 @@ This folder gathers a sequence of C exercises, built progressively to solidify t
 
 Each `.c` file represents an independent exercise, compilable on its own. Binaries (`.exe`), build folders, IDE files, and OS files **are not tracked** — see the repository's `.gitignore`.
 
+## Folder structure
+
+```
+Exercises-Initial-Basic/          → Exercises 1 to 11
+Exercises-Initial-Intermediary/   → Exercises 12 onward
+```
+
 ## How to compile and run
 
 ```bash
-gcc Exercises-N.c -o Exercises-N
+gcc Exercises-Initial-Basic/Exercises-N.c -o Exercises-N
 ./Exercises-N
 ```
 
-(replace `N` with the exercise number)
+(replace `N` with the exercise number and the folder path with wherever the file is located)
 
 ---
 
 ## Exercise summaries
+
+### 📁 Exercises-Initial-Basic
 
 ### `Exercises-1.c` — Basic input and output
 Captures the user's name, age, and height via `scanf` and displays the formatted data with `printf`. **Adds:** primitive types (`char`, `int`, `float`), the use of `char` arrays as strings, and the fundamental `scanf`/`printf` pair with format specifiers (`%s`, `%d`, `%f`).
@@ -51,6 +60,8 @@ Generates the multiplication table for a number entered by the user. **Adds:** r
 
 ### `Exercises-11.c` — Even and odd number classification
 Iterates through the numbers from 0 to the entered value, classifying each as even or odd and counting the total of each category. **Adds:** the use of the modulo operator (`%`) for parity checking, combining `for` with `if/else` inside the loop, and accumulators (`par`, `impar`) updated on each iteration.
+
+### 📁 Exercises-Initial-Intermediary
 
 ### `Exercises-12.c` — Counting positives, negatives, and zeros (no arrays)
 Reads 10 integers entered by the user and counts how many are positive, negative, or zero, without using arrays. **Adds:** reinforcement of `for` combined with multiple conditions (`if/else if/else`), the use of more than one counter variable at the same time, and practice solving a classification problem without relying on data structures (laying the groundwork for arrays later on).
