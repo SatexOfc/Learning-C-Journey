@@ -5,7 +5,7 @@ int somar(int x, int y){
 }
 
 int main(){
-    int x, y, total;
+    int x, y;
     
     printf("Qual  o 1º numero você quer somar: \n");
     scanf("%d", &x);

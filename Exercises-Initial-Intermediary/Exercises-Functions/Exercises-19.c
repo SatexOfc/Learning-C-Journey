@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int mostrarMensagem(){
+void mostrarMensagem(){
     printf("Hello");
 }
 

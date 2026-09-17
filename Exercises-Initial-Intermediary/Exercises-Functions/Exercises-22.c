@@ -8,7 +8,7 @@ int multi(int x){
 int main(){
     int x;
     
-    printf("Qual numero você quer multiplicar");
+    printf("Qual numero você quer multiplicar?: \n");
     scanf("%d", &x);
     
     printf("Resultado:%d", multi(x));

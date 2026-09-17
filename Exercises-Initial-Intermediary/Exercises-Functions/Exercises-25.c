@@ -23,13 +23,13 @@ int main(){
     float a, b, c, d;
     float res1, res2;
 
-    printf("qual o numero A?");
+    printf("qual o numero A?\n");
     scanf("%f", &a);
 
-    printf("qual o numero B?"); 
+    printf("qual o numero B?\n"); 
     scanf("%f", &b);
 
-    printf("qual o numero C?");    
+    printf("qual o numero C?\n");    
     scanf("%f", &c);
 
     d = delta(a, b, c);
@@ -37,9 +37,9 @@ int main(){
     res1 = x1(a,b,d);
     res2 = x2(a,b,d);
 
-    printf("o primeiro resultado é %.1f", res1);
+    printf("o primeiro resultado é %.1f\n", res1);
 
-    printf("o segundo resultado é %.1f", res2);
+    printf("o segundo resultado é %.1f\n", res2);
 
 }
 
