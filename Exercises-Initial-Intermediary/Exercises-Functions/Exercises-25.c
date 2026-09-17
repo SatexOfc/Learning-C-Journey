@@ -42,5 +42,3 @@ int main(){
     printf("o segundo resultado é %.1f\n", res2);
 
 }
-
-   
