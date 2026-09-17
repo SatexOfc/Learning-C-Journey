@@ -14,6 +14,7 @@ Exercises-Conditionals/            → Exercises 2, 4, 5, and 6
 Exercises-Loops/                   → Exercises 7, 9, 10, 11, and 12
 Exercises-Concept-Integration/     → Exercise 8
 Exercises-Dynamic-Squares/         → Exercises 13 onward
+Exercises-Functions/               → Exercises 19 to 25
 ```
 
 ## How to compile and run
@@ -90,6 +91,29 @@ Similar to exercise 13, but reads columns before rows and uses `#` as the charac
 ### `Exercises-17.c` — Rectangle with alternating row pattern
 Draws a rectangle of `#`, but alternates the character's alignment ("# " or " #") depending on whether the row is even or odd. **Adds:** combining nested loops with a conditional (`if/else`) *inside* the inner loop, showing how to apply conditional logic to each cell of a visual pattern, not just to the loop's overall structure.
 
+### 📁 Exercises-Functions
+
+### `Exercises-19.c` — First function (`void`, no parameters)
+Defines a `mostrarMensagem()` function that simply prints a message, called from `main`. **Adds:** the concept of a **function** itself — declaration, definition, and call — using `void` for a function that returns no value.
+
+### `Exercises-20.c` — Function with a parameter (string)
+Defines a `saudacao(char nome[50])` function that takes a string as a parameter and displays it. **Adds:** passing parameters to a function, including the specific case of passing a `char` array (string) as an argument.
+
+### `Exercises-21.c` — Function with a return value (squaring)
+Defines `multi(int x)`, which returns `x*x`. **Adds:** functions that **take a parameter and return** a value, and using a function's result directly inside a `printf`.
+
+### `Exercises-22.c` — Function with a return value (multiply by 2)
+A variation of exercise 21, now returning `x*2`. **Adds:** reinforcement of the parameter → processing → return pattern, consolidating single-parameter function logic.
+
+### `Exercises-23.c` — Function with two parameters (sum)
+Defines `somar(int x, int y)`, which takes two parameters and returns their sum. **Adds:** functions with **multiple parameters**, showing how to extend a function's logic from one to several arguments.
+
+### `Exercises-24.c` — Function with internal conditional logic
+Defines `maiorNum(int num1, int num2)`, which uses `if/else if/else` internally to decide which value to return (or `0` if they're equal). **Adds:** combining **functions with conditionals**, showing that a function can encapsulate an entire decision-making process, not just a direct calculation.
+
+### `Exercises-25.c` — Quadratic formula (multiple functions)
+Calculates the roots of a quadratic equation using three separate functions (`delta`, `x1`, `x2`), each responsible for one part of the calculation, plus the `<math.h>` library for the square root. **Adds:** the concept of **breaking a larger problem into several smaller functions**, each with a single responsibility, and function composition (one result feeding into the others) — an important step toward code modularization.
+
 ---
 
 ## Overall learning progression
@@ -101,5 +125,6 @@ Draws a rectangle of `#`, but alternates the character's alignment ("# " or " #"
 | Loops | Exercises-Loops | 7, 9, 10, 11, 12 | `while`, `for`, counters, modulo operator, multiple accumulators |
 | Concept integration | Exercises-Concept-Integration | 8 | Loops + conditionals + strings + state control |
 | Nested loops / visual patterns | Exercises-Dynamic-Squares | 13, 14, 15, 16, 17 | `for` inside `for`, inner loop dependent on outer, conditional inside the loop, shape construction |
+| Functions | Exercises-Functions | 19, 20, 21, 22, 23, 24, 25 | Function declaration and calls, parameters (single and multiple), return values, functions combined with conditionals, decomposition into multiple functions |
 
 Overall, the folder covers the essential pillars of the C language — **input/output, data types, conditional structures, loops, and string manipulation** — culminating in exercises that already require combining several of these concepts to solve more realistic problems.

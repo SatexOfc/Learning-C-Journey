@@ -14,6 +14,7 @@ Exercises-Conditionals/            → Exercises 2, 4, 5 e 6
 Exercises-Loops/                   → Exercises 7, 9, 10, 11 e 12
 Exercises-Concept-Integration/     → Exercise 8
 Exercises-Dynamic-Squares/         → Exercises 13 em diante
+Exercises-Functions/               → Exercises 19 a 25
 ```
 
 ## Como compilar e executar
@@ -90,6 +91,29 @@ Semelhante ao exercício 13, mas lendo colunas antes de linhas e usando `#` como
 ### `Exercises-17.c` — Retângulo com padrão alternado por linha
 Desenha um retângulo de `#`, mas alterna o alinhamento do caractere ("# " ou " #") dependendo se a linha é par ou ímpar. **Agrega:** combinação de laços aninhados com uma condicional (`if/else`) *dentro* do laço interno, mostrando como aplicar lógica condicional a cada célula de um padrão visual, e não só à estrutura geral do laço.
 
+### 📁 Exercises-Functions
+
+### `Exercises-19.c` — Primeira função (`void`, sem parâmetros)
+Define uma função `mostrarMensagem()` que apenas imprime um texto, chamada a partir do `main`. **Agrega:** o conceito de **função** propriamente dito — declaração, definição e chamada — usando o tipo `void` para uma função que não retorna valor.
+
+### `Exercises-20.c` — Função com parâmetro (string)
+Define uma função `saudacao(char nome[50])` que recebe uma string como parâmetro e a exibe. **Agrega:** passagem de parâmetros para uma função, incluindo o caso específico de passar um vetor de `char` (string) como argumento.
+
+### `Exercises-21.c` — Função com retorno (elevar ao quadrado)
+Define `multi(int x)` que retorna `x*x`. **Agrega:** funções que **recebem e retornam** um valor, e o uso do resultado de uma função diretamente dentro de um `printf`.
+
+### `Exercises-22.c` — Função com retorno (multiplicar por 2)
+Variação do exercício 21, agora retornando `x*2`. **Agrega:** reforço do padrão parâmetro → processamento → retorno, consolidando a lógica de funções com um único parâmetro.
+
+### `Exercises-23.c` — Função com dois parâmetros (soma)
+Define `somar(int x, int y)`, que recebe dois parâmetros e retorna a soma. **Agrega:** funções com **múltiplos parâmetros**, mostrando como estender a lógica de uma função de um para vários argumentos.
+
+### `Exercises-24.c` — Função com lógica condicional interna
+Define `maiorNum(int num1, int num2)`, que usa `if/else if/else` internamente para decidir qual valor retornar (ou `0` se forem iguais). **Agrega:** a combinação de **funções com condicionais**, mostrando que uma função pode encapsular uma lógica de decisão inteira, não só um cálculo direto.
+
+### `Exercises-25.c` — Fórmula de Bhaskara (múltiplas funções)
+Calcula as raízes de uma equação do 2º grau usando três funções separadas (`delta`, `x1`, `x2`), cada uma responsável por uma parte do cálculo, além da biblioteca `<math.h>` para a raiz quadrada. **Agrega:** o conceito de **decompor um problema maior em várias funções menores**, cada uma com uma responsabilidade única, e a composição de funções (o resultado de uma alimentando as outras) — um passo importante rumo à modularização de código.
+
 ---
 
 ## Progressão geral de aprendizado
@@ -101,5 +125,6 @@ Desenha um retângulo de `#`, mas alterna o alinhamento do caractere ("# " ou " 
 | Laços de repetição | Exercises-Loops | 7, 9, 10, 11, 12 | `while`, `for`, contadores, operador módulo, acumuladores múltiplos |
 | Integração de conceitos | Exercises-Concept-Integration | 8 | Laços + condicionais + strings + controle de estado |
 | Laços aninhados / padrões visuais | Exercises-Dynamic-Squares | 13, 14, 15, 16, 17 | `for` dentro de `for`, laço interno dependente do externo, condicional dentro do laço, construção de formas |
+| Funções | Exercises-Functions | 19, 20, 21, 22, 23, 24, 25 | Declaração e chamada de funções, parâmetros (simples e múltiplos), retorno de valores, funções combinadas com condicionais, decomposição em múltiplas funções |
 
 No conjunto, a pasta cobre os pilares essenciais da linguagem C — **entrada/saída, tipos de dados, estruturas condicionais, laços de repetição e manipulação de strings** — culminando em exercícios que já exigem combinar vários desses conceitos para resolver problemas mais realistas.
