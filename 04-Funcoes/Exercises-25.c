@@ -33,12 +33,23 @@ int main(){
     scanf("%f", &c);
 
     d = delta(a, b, c);
-
     res1 = x1(a,b,d);
     res2 = x2(a,b,d);
 
-    printf("o primeiro resultado é %.1f\n", res1);
+    if(d > 0){
+        
+        printf("a equação possui duas raízes reais\n");
+        printf("as raízes são:%.1f e %.1f\n", res1, res2);
 
-    printf("o segundo resultado é %.1f\n", res2);
+    } else if(d == 0){
+        
+        printf("a equação possui uma raiz real\n");
+        printf("a raiz é:%.1f\n", res1);
+
+    } else {
+        
+        printf("a equação não possui raízes reais\n");
+
+    }
 
 }
