@@ -34,14 +34,15 @@ This isn't a professional project or a production-ready library — it's a real 
 - [x] Arrays
 - [x] Strings
 - [x] Structs
+- [x] Searching arrays of structs
 - [ ] Pointers
 - [ ] Memory management
 - [ ] File handling
 - [ ] Header files and modularization
 - [ ] Larger projects
 
-📌 Completed exercises: **1 to 33**
-📌 Next exercises: **34 (search a student by name)** and **35 (find the student with the highest grade)**
+📌 Completed exercises: **1 to 35**
+📌 Next topic: **Pointers**
 
 ## 5. What I've learned so far
 
@@ -71,6 +72,11 @@ This isn't a professional project or a production-ready library — it's a real 
 - Having a function calculate/analyze something and return that info to `main`
 - Avoiding hardcoded values scattered through the code
 - Starting to think about reusing functions
+- Searching arrays of structs
+- Using `strcmp()` in searches
+- Returning an index to signal a search result (including `-1` for "not found")
+- Comparing values inside an array of structs to find a "highest" or "lowest"
+- Separating responsibilities between a search function and `main()`
 
 ## 6. Folder structure
 
@@ -310,14 +316,26 @@ gcc 01-Fundamentos/Exercises-N.c -o Exercises-N
 - Avoiding hardcoded values scattered through the code
 - Functions receiving the count as an extra parameter
 
+### Exercise 34 — Search a student by name
+**Goal:** Find a specific student inside an array of structs based on a typed name.
+**Concepts practiced:**
+- Using `strcmp()` to compare strings during a search
+- The `search` function loops through the array and returns the index of the matching student, or `-1` if none is found
+- Separation of responsibilities: the function only searches and returns the index; `main()` decides what to do with the result (show the data or report "not found")
+
+### Exercise 35 — Find the student with the highest grade
+**Goal:** Loop through an array of structs and identify the student with the highest grade.
+**Concepts practiced:**
+- Comparing values inside an array of structs (`aluno[j].nota > aluno[maior].nota`)
+- The function returns only the position (index) of the student found, and `main()` uses that index to access their name and grade
+- Reinforcing the separation of responsibilities between the search function and `main()`
+
 ---
 
 ## 9. Next steps
 
 Things I haven't studied yet (and I'm not pretending I already know):
 
-- Searching for a student by name (Exercise 34)
-- Finding the student with the highest grade (Exercise 35)
 - Pointers
 - Passing by reference
 - Dynamic memory allocation (`malloc`, `calloc`, `realloc`, `free`)

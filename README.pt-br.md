@@ -34,14 +34,15 @@ Não é um projeto profissional nem uma biblioteca pronta para produção — é
 - [x] Arrays
 - [x] Strings
 - [x] Structs
+- [x] Busca em arrays de structs
 - [ ] Ponteiros
 - [ ] Gerenciamento de memória
 - [ ] Manipulação de arquivos
 - [ ] Header files e modularização
 - [ ] Projetos maiores
 
-📌 Exercícios concluídos: **1 a 33**
-📌 Próximos exercícios: **34 (busca de aluno pelo nome)** e **35 (busca de aluno com maior nota)**
+📌 Exercícios concluídos: **1 a 35**
+📌 Próximo tema: **Ponteiros**
 
 ## 5. O que aprendi até agora
 
@@ -71,6 +72,11 @@ Não é um projeto profissional nem uma biblioteca pronta para produção — é
 - Fazer uma função calcular/analisar algo e devolver essa informação para a `main`
 - Evitar valores fixos espalhados pelo código
 - Pensar em reutilização de funções
+- Busca em arrays de structs
+- Uso de `strcmp()` em buscas
+- Retorno de índices para indicar o resultado de uma busca (incluindo `-1` para "não encontrado")
+- Comparação de valores dentro de um array de structs para encontrar um "maior" ou "menor"
+- Separação de responsabilidades entre a função de busca e o `main()`
 
 ## 6. Estrutura de pastas
 
@@ -310,14 +316,26 @@ gcc 01-Fundamentos/Exercises-N.c -o Exercises-N
 - Evitar valores fixos espalhados pelo código
 - Funções recebendo a quantidade como parâmetro adicional
 
+### Exercise 34 — Buscar aluno pelo nome
+**Objetivo:** Buscar um aluno específico dentro de um array de structs a partir do nome digitado.
+**Conceitos praticados:**
+- Uso de `strcmp()` para comparar strings dentro de uma busca
+- A função `search` percorre o array e retorna o índice do aluno encontrado, ou `-1` caso não encontre
+- Separação de responsabilidades: a função só busca e retorna o índice; é o `main()` quem decide o que fazer com o resultado (exibir os dados ou avisar que não encontrou)
+
+### Exercise 35 — Buscar aluno com maior nota
+**Objetivo:** Percorrer um array de structs e identificar o aluno com a maior nota.
+**Conceitos praticados:**
+- Comparação de valores dentro de um array de structs (`aluno[j].nota > aluno[maior].nota`)
+- A função retorna apenas a posição (índice) do aluno encontrado, e o `main()` usa esse índice para acessar nome e nota
+- Reforço da separação de responsabilidades entre função de busca e `main()`
+
 ---
 
 ## 9. Próximos passos
 
 Ainda não estudei (e não estou fingindo que já sei):
 
-- Busca de aluno pelo nome (Exercício 34)
-- Busca de aluno com maior nota (Exercício 35)
 - Ponteiros
 - Passagem por referência
 - Alocação dinâmica de memória (`malloc`, `calloc`, `realloc`, `free`)
