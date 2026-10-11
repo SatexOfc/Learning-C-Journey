@@ -35,14 +35,14 @@ This isn't a professional project or a production-ready library — it's a real 
 - [x] Strings
 - [x] Structs
 - [x] Searching arrays of structs
-- [ ] Pointers
-- [ ] Memory management
+- [x] Pointers
+- [ ] Memory management (first contact with `malloc` and `free` in Exercise 38)
 - [ ] File handling
 - [ ] Header files and modularization
 - [ ] Larger projects
 
-📌 Completed exercises: **1 to 35**
-📌 Next topic: **Pointers**
+📌 Completed exercises: **1 to 38**
+📌 Current topic: **Dynamic memory allocation** (first contact)
 
 ## 5. What I've learned so far
 
@@ -77,6 +77,12 @@ This isn't a professional project or a production-ready library — it's a real 
 - Returning an index to signal a search result (including `-1` for "not found")
 - Comparing values inside an array of structs to find a "highest" or "lowest"
 - Separating responsibilities between a search function and `main()`
+- Pointers and memory addresses (the `&` operator)
+- Dereferencing pointers (the `*` operator)
+- Passing by reference (changing variables' values inside a function)
+- Pointers to structs and output parameters
+- Pointer arithmetic to walk through arrays
+- First contact with dynamic allocation: `malloc()`, `sizeof()`, `NULL` checks, and `free()`
 
 ## 6. Folder structure
 
@@ -87,6 +93,8 @@ Learning-C-Journey/
 ├── 03-Loops-e-Padroes/
 ├── 04-Funcoes/
 ├── 05-Structs/
+├── 06-Pointers/
+├── 07-Dynamic-Memory/    (planned path for Exercise 38)
 ├── 06-Projetos/          (reserved for future projects)
 ├── .gitignore
 ├── README.md
@@ -98,6 +106,8 @@ Learning-C-Journey/
 - **03-Loops-e-Padroes** — repetition with `while` and `for`, nested loops, and building visual patterns.
 - **04-Funcoes** — function declaration, parameters, return values, and organizing logic into functions.
 - **05-Structs** — arrays, strings, structs, and combining all of it in more complete exercises.
+- **06-Pointers** — pointers, memory addresses, passing by reference, and pointer arithmetic.
+- **07-Dynamic-Memory** — dynamic memory allocation with `malloc()` and `free()` (planned folder; Exercise 38 is still to be moved there).
 - **06-Projetos** — empty for now, reserved for bigger projects (like the future "Sistema de Contas").
 
 ## 7. How to run the exercises
@@ -330,15 +340,44 @@ gcc 01-Fundamentos/Exercises-N.c -o Exercises-N
 - The function returns only the position (index) of the student found, and `main()` uses that index to access their name and grade
 - Reinforcing the separation of responsibilities between the search function and `main()`
 
+### 📁 06-Pointers
+
+### Exercise 36 — Swapping two variables using pointers
+**Goal:** Swap the values of two integer variables using a function that receives their addresses.
+**Concepts practiced:**
+- The `trocar()` function receives pointers to two integer variables
+- Swapping the original values using dereferencing and a temporary variable
+- Using `&` to pass the variables' addresses
+- Pointers, memory addresses, dereferencing, and passing by reference
+
+### Exercise 37 — Student class analyzer with pointers
+**Goal:** Analyze a class of students (average, highest and lowest grade, and search by name) using pointers.
+**Concepts practiced:**
+- A `struct aluno` with name, age, and grade
+- Calculating the class average and identifying the students with the highest and lowest grades
+- Searching for a student by name with `strcmp()`, returning the index found or `-1` if not found
+- Walking through the elements using pointer arithmetic
+- Pointers to structs, arrays of structs, and output parameters
+
+### 📁 07-Dynamic-Memory
+
+### Exercise 38 — First contact with dynamic memory allocation
+**Goal:** Reserve, use, and free a block of memory whose size is chosen by the user at runtime.
+**Concepts practiced:**
+- Reading how many numbers to store, checking that the amount is positive
+- Reserving memory with `malloc()` and `sizeof(int)`
+- Checking for allocation failure (`NULL` return)
+- Reading and storing the numbers in the allocated block (dynamic array)
+- Printing the values using pointer arithmetic
+- Releasing the memory with `free()`
+
 ---
 
 ## 9. Next steps
 
 Things I haven't studied yet (and I'm not pretending I already know):
 
-- Pointers
-- Passing by reference
-- Dynamic memory allocation (`malloc`, `calloc`, `realloc`, `free`)
+- Dynamic memory allocation: I've had my first contact with `malloc` and `free` (Exercise 38), but `calloc`, `realloc`, and more practice are still missing
 - More advanced memory handling
 - Files
 - Modularization with `.h` and `.c`

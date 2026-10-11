@@ -35,14 +35,14 @@ Não é um projeto profissional nem uma biblioteca pronta para produção — é
 - [x] Strings
 - [x] Structs
 - [x] Busca em arrays de structs
-- [ ] Ponteiros
-- [ ] Gerenciamento de memória
+- [x] Ponteiros
+- [ ] Gerenciamento de memória (primeiro contato com `malloc` e `free` no Exercício 38)
 - [ ] Manipulação de arquivos
 - [ ] Header files e modularização
 - [ ] Projetos maiores
 
-📌 Exercícios concluídos: **1 a 35**
-📌 Próximo tema: **Ponteiros**
+📌 Exercícios concluídos: **1 a 38**
+📌 Tema atual: **Alocação dinâmica de memória** (primeiro contato)
 
 ## 5. O que aprendi até agora
 
@@ -77,6 +77,12 @@ Não é um projeto profissional nem uma biblioteca pronta para produção — é
 - Retorno de índices para indicar o resultado de uma busca (incluindo `-1` para "não encontrado")
 - Comparação de valores dentro de um array de structs para encontrar um "maior" ou "menor"
 - Separação de responsabilidades entre a função de busca e o `main()`
+- Ponteiros e endereços de memória (operador `&`)
+- Desreferenciação de ponteiros (operador `*`)
+- Passagem por referência (trocar o valor de variáveis dentro de uma função)
+- Ponteiros para structs e parâmetros de saída
+- Aritmética de ponteiros para percorrer arrays
+- Primeiro contato com alocação dinâmica: `malloc()`, `sizeof()`, verificação de `NULL` e `free()`
 
 ## 6. Estrutura de pastas
 
@@ -87,6 +93,8 @@ Learning-C-Journey/
 ├── 03-Loops-e-Padroes/
 ├── 04-Funcoes/
 ├── 05-Structs/
+├── 06-Pointers/
+├── 07-Dynamic-Memory/    (caminho planejado para o Exercício 38)
 ├── 06-Projetos/          (reservada para projetos futuros)
 ├── .gitignore
 ├── README.md
@@ -98,6 +106,8 @@ Learning-C-Journey/
 - **03-Loops-e-Padroes** — repetição com `while` e `for`, loops aninhados e construção de padrões visuais.
 - **04-Funcoes** — declaração, parâmetros, retorno e organização de lógica em funções.
 - **05-Structs** — arrays, strings, structs e combinação de tudo isso em exercícios mais completos.
+- **06-Pointers** — ponteiros, endereços de memória, passagem por referência e aritmética de ponteiros.
+- **07-Dynamic-Memory** — alocação dinâmica de memória com `malloc()` e `free()` (pasta planejada; o Exercício 38 ainda será movido para ela).
 - **06-Projetos** — vazia por enquanto, reservada para projetos maiores (como o futuro "Sistema de Contas").
 
 ## 7. Como executar os exercícios
@@ -330,15 +340,44 @@ gcc 01-Fundamentos/Exercises-N.c -o Exercises-N
 - A função retorna apenas a posição (índice) do aluno encontrado, e o `main()` usa esse índice para acessar nome e nota
 - Reforço da separação de responsabilidades entre função de busca e `main()`
 
+### 📁 06-Pointers
+
+### Exercise 36 — Troca de duas variáveis com ponteiros
+**Objetivo:** Trocar o valor de duas variáveis inteiras usando uma função que recebe os endereços delas.
+**Conceitos praticados:**
+- A função `trocar()` recebe ponteiros para duas variáveis inteiras
+- Troca dos valores originais usando desreferenciação e uma variável auxiliar
+- Uso de `&` para passar os endereços das variáveis
+- Ponteiros, endereços de memória, desreferenciação e passagem por referência
+
+### Exercise 37 — Analisador de turma com ponteiros
+**Objetivo:** Analisar uma turma de alunos (média, maior e menor nota e busca por nome) usando ponteiros.
+**Conceitos praticados:**
+- `struct aluno` com nome, idade e nota
+- Cálculo da média da turma e identificação dos alunos com maior e menor nota
+- Busca de aluno pelo nome com `strcmp()`, retornando o índice encontrado ou `-1` caso não seja encontrado
+- Percorrer os elementos usando aritmética de ponteiros
+- Ponteiros para estruturas, arrays de estruturas e parâmetros de saída
+
+### 📁 07-Dynamic-Memory
+
+### Exercise 38 — Primeiro contato com alocação dinâmica de memória
+**Objetivo:** Reservar, usar e liberar um bloco de memória cujo tamanho é definido pelo usuário em tempo de execução.
+**Conceitos praticados:**
+- Leitura da quantidade de números a armazenar, verificando se ela é positiva
+- Reserva de memória com `malloc()` e `sizeof(int)`
+- Verificação de falha na alocação (retorno `NULL`)
+- Leitura e armazenamento dos números no bloco alocado (array dinâmico)
+- Impressão dos valores usando aritmética de ponteiros
+- Liberação da memória com `free()`
+
 ---
 
 ## 9. Próximos passos
 
 Ainda não estudei (e não estou fingindo que já sei):
 
-- Ponteiros
-- Passagem por referência
-- Alocação dinâmica de memória (`malloc`, `calloc`, `realloc`, `free`)
+- Alocação dinâmica de memória: já tive o primeiro contato com `malloc` e `free` (Exercício 38), mas ainda falta `calloc`, `realloc` e mais prática
 - Manipulação mais avançada de memória
 - Arquivos
 - Modularização com `.h` e `.c`
